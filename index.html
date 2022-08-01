@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different events for same element</title>
+</head>
+<body>
+    <h1>Different element for same elementy</h1>
+    <p>This example uses the addEventListner () method to add many events on the same button. </p>
+    <button id="mybtn">click me</button>
+    <p id="demo"></p>
+    <script>
+        var x=document.getElementById("mybtn");
+        x.addEventListener("mouseover",myfunction);
+        x.addEventListener("click",mysecondfunction);
+        x.addEventListener("mouseout",mythirdfunction);
+
+        function myfunction(){
+            document.getElementById("demo").innerHTML+="moused over !<br>";
+        }
+        function mysecondfunction(){
+            document.getElementById("demo").innerHTML+="clicked !<br>";
+        }
+        function mythirdfunction(){
+            document.getElementById("demo").innerHTML+="moused out !<br>";
+        }
+    </script>
+</body>
+</html>
